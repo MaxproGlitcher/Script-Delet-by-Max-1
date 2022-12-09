@@ -1,0 +1,14 @@
+local successPastebin, errormessagePastebin = pcall(function()
+	loadstring(game:HttpGet("https://pastebin.com/Dy7Hfayg"))()
+end)
+
+if not successPastebin then
+	local successGithub, errormessageGithub = pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/MaxproGlitcher/Parts-remover/main/code%20part%20remover"))()		
+	end)
+	
+	if not successGithub then
+		warn([[Error loading: ]]..errormessageGithub..[[ 
+			Try re-installing the scripts at https://github.com/kreekman/Part-Deletor]])
+	end
+end
